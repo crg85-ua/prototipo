@@ -1,0 +1,25 @@
+<ion-header [translucent]="true">
+  <ion-toolbar>
+    <ion-title>Lista de eventos</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content [fullscreen]="true">
+  <ion-header collapse="condense">
+    <ion-toolbar>
+      <ion-title size="large">Lista de eventos</ion-title>
+    </ion-toolbar>
+  </ion-header>
+
+  <ion-list>
+    <ion-item *ngFor="let event of eventos" [href]="generateURL(event.id)">
+      <ion-thumbnail slot="start">
+        <img [src]="event.photo" alt="Event Image">
+      </ion-thumbnail>
+      <ion-label>
+        <h2>{{ event.name }}</h2>
+        <p>{{ event.host }}</p>
+      </ion-label>
+    </ion-item>
+  </ion-list>
+</ion-content>

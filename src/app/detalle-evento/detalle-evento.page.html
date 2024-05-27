@@ -1,0 +1,19 @@
+<ion-header [translucent]="true">
+  <ion-toolbar>
+    <ion-title>Detalle evento</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content [fullscreen]="true">
+  <ion-card>    
+    <img alt="Evento" [src]="'../../assets/images/eventos/{{evento.photo}}.jpg'" />
+    <ion-card-header>
+      <ion-label display="none">{{evento.id}}</ion-label>
+      <ion-card-title>{{evento.name}}</ion-card-title>
+      <ion-card-subtitle>{{evento.host}}</ion-card-subtitle>
+    </ion-card-header>
+    <ion-card-content>
+      {{evento.description}}
+    </ion-card-content>
+  </ion-card>
+</ion-content>

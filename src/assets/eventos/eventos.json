@@ -1,0 +1,47 @@
+[
+    {
+        "id": 1,
+        "name": "Taller de fotografía",
+        "description": "Mejora tus habilidades capturando momentos únicos.",
+        "startDate": "2024-07-10",
+        "host": "Escuela de Fotografía Creativa",
+        "location": "Carrer de Balmes, 456",
+        "photo": "evento2.jpg"
+    },
+    {
+        "id": 2,
+        "name": "Charla sobre sostenibilidad",
+        "description": "Aprende sobre prácticas ecoamigables para cuidar el planeta.",
+        "startDate": "2024-06-25",
+        "host": "Asociación Verde",
+        "location": "Centro Cívico de Gràcia",
+        "photo": "evento3.jpg"
+    },
+    {
+        "id": 3,
+        "name": "Concierto en el parque",
+        "description": "Disfruta de una tarde de música al aire libre.",
+        "startDate": "2024-06-15",
+        "host": "Ayuntamiento de Barcelona",
+        "location": "Parque de la Ciutadella",
+        "photo": "https://example.com/concierto.jpg"
+    },
+    {
+        "id": 4,
+        "name": "Exposición de arte contemporáneo",
+        "description": "Explora las últimas creaciones de artistas locales.",
+        "startDate": "2024-06-20",
+        "host": "Galería de Arte Moderno",
+        "location": "Carrer dels Angels, 123",
+        "photo": "https://example.com/exposicion.jpg"
+    },
+    {
+        "id": 5,
+        "name": "Feria gastronómica",
+        "description": "Degusta platos deliciosos de diferentes culturas.",
+        "startDate": "2024-07-02",
+        "host": "Mercado de la Boqueria",
+        "location": "La Rambla, 91",
+        "photo": "https://example.com/feria.jpg"
+    }
+]
