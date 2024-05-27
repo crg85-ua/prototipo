@@ -1,4 +1,5 @@
 import { Component } from '@angular/core';
+import { NavController } from '@ionic/angular';
 
 @Component({
   selector: 'app-perfil',
@@ -6,6 +7,7 @@ import { Component } from '@angular/core';
   styleUrls: ['./perfil.page.scss'],
 })
 export class PerfilPage {
+  showMenu: boolean = false;
   isEditing: boolean = false;
   showMoreInterests: boolean = false;
   profileDescription: string = "Soy un apasionado de la música y me encanta descubrir nuevos talentos. Siempre estoy en busca de nuevas experiencias y me encanta compartir mis intereses con otros.";
@@ -20,7 +22,16 @@ export class PerfilPage {
     { name: "Lectura", image: "../../assets/images/perfil/lectura.jfif", selected: false }
   ];
 
-  constructor() {}
+  constructor(private navCtrl: NavController) {}
+
+  toggleMenu() {
+    this.showMenu = !this.showMenu;
+  }
+
+  goToProfile() {
+    this.navCtrl.navigateForward('/perfil');
+    this.showMenu = false; // Cerrar el menú después de la navegación
+  }
 
   editDescription() {
     this.editableDescription = this.profileDescription;
