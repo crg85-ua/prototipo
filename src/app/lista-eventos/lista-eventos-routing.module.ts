@@ -5,7 +5,7 @@ import { ListaEventosPage } from './lista-eventos.page';
 
 const routes: Routes = [
   {
-    path: 'lista-eventos',
+    path: '',
     component: ListaEventosPage
   },  
   {
