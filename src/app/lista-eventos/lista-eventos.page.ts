@@ -22,7 +22,7 @@ export class ListaEventosPage implements OnInit {
   }
 
   generateURL(id: string){
-    return "tabs/lista-eventos/detalle-evento/"+id;
+    return "lista-eventos/detalle-evento/"+id;
   }
 
 }

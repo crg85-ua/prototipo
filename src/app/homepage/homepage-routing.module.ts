@@ -6,13 +6,15 @@ import { HomepagePage } from './homepage.page';
 const routes: Routes = [
   {
     path: '',
-    component: HomepagePage,
-    children: [
-      {
-        path: 'events-all',
-        loadChildren: () => import('../all-events/all-events.module').then(m => m.AllEventsPageModule)
-      }
-    ]
+    component: HomepagePage
+  },  
+  {
+    path: 'all-events',
+    loadChildren: () => import('../all-events/all-events.module').then(m => m.AllEventsPageModule)
+  },
+  {
+    path: 'detalle-evento/:id',
+    loadChildren: () => import('../detalle-evento/detalle-evento.module').then(m => m.DetalleEventoPageModule)
   }
 ];
 

@@ -43,29 +43,31 @@
       <ion-col>
         <h2 class="header-title">
           Top eventos
-          <a [routerLink]="['events-all']" class="see-all">See all</a>
+          <a href='home/all-events' class="see-all">See all</a>
         </h2>
       </ion-col>
     </ion-row>
     <ion-card *ngIf="selectedTab === 'all'">
       <ng-container *ngFor="let evento of eventos; let i = index">
-        <ng-container *ngIf="i < 2">
-          <div class="image-container">
-            <img src="./assets/images/eventos/{{ evento.photo }}" alt="Evento" />
-          </div>
-          <ion-card-header>
-            <ion-card-subtitle>{{ evento.name }}</ion-card-subtitle>
-          </ion-card-header>
-          <ion-card-content>
-            <ion-row>
-              <ion-col size="8">
-                <p>{{ evento.host }} • 2.5M views • {{ evento.startDate | date }}</p>
-              </ion-col>
-              <ion-col size="4" class="text-right price">
-                FREE
-              </ion-col>
-            </ion-row>
-          </ion-card-content>
+        <ng-container *ngIf=" i < 2">
+          <ion-card [href]="generateURL(evento.id)" target="_blank">
+            <div class="image-container">
+              <img src="./assets/images/eventos/{{ evento.photo }}" alt="Evento" />
+            </div>
+            <ion-card-header>
+              <ion-card-subtitle>{{ evento.name }}</ion-card-subtitle>
+            </ion-card-header>
+            <ion-card-content>
+              <ion-row>
+                <ion-col size="8">
+                  <p>{{ evento.host }} • 2.5M views • {{ evento.startDate | date }}</p>
+                </ion-col>
+                <ion-col size="4" class="text-right price">
+                  FREE
+                </ion-col>
+              </ion-row>
+            </ion-card-content>
+          </ion-card>
         </ng-container>
       </ng-container>
     </ion-card>
@@ -80,22 +82,28 @@
       </ion-col>
     </ion-row>
     <ion-card *ngIf="selectedTab === 'all' || selectedTab === 'tendencias'">
-      <div class="image-container">
-        <img src="./assets/images/eventos/evento1.jpg" alt="Evento" />
-      </div>
-      <ion-card-header>
-        <ion-card-subtitle>Electro Dreams | CONCERT</ion-card-subtitle>
-      </ion-card-header>
-      <ion-card-content>
-        <ion-row>
-          <ion-col size="8">
-            <p>Elizabeth Lee • 2.5M views • 2 days away</p>
-          </ion-col>
-          <ion-col size="4" class="text-right price">
-            $100
-          </ion-col>
-        </ion-row>
-      </ion-card-content>
+      <ng-container *ngFor="let evento of eventos; let i = index">
+        <ng-container *ngIf=" i > 1 && i < 4">
+          <ion-card [href]="generateURL(evento.id)" target="_blank">
+            <div class="image-container">
+              <img src="./assets/images/eventos/{{ evento.photo }}" alt="Evento" />
+            </div>
+            <ion-card-header>
+              <ion-card-subtitle>{{ evento.name }}</ion-card-subtitle>
+            </ion-card-header>
+            <ion-card-content>
+              <ion-row>
+                <ion-col size="8">
+                  <p>{{ evento.host }} • 2.5M views • {{ evento.startDate | date }}</p>
+                </ion-col>
+                <ion-col size="4" class="text-right price">
+                  FREE
+                </ion-col>
+              </ion-row>
+            </ion-card-content>
+          </ion-card>
+        </ng-container>
+      </ng-container>
     </ion-card>
 
     <!-- Recomendados Section -->
@@ -108,22 +116,28 @@
       </ion-col>
     </ion-row>
     <ion-card *ngIf="selectedTab === 'all' || selectedTab === 'para-ti'">
-      <div class="image-container">
-        <img src="./assets/images/eventos/evento1.jpg" alt="Evento" />
-      </div>
-      <ion-card-header>
-        <ion-card-subtitle>Electro Dreams | CONCERT</ion-card-subtitle>
-      </ion-card-header>
-      <ion-card-content>
-        <ion-row>
-          <ion-col size="8">
-            <p>Elizabeth Lee • 2.5M views • 2 days away</p>
-          </ion-col>
-          <ion-col size="4" class="text-right price">
-            $100
-          </ion-col>
-        </ion-row>
-      </ion-card-content>
+      <ng-container *ngFor="let evento of eventos; let i = index">
+        <ng-container *ngIf=" i > 2 && i < 5">
+          <ion-card [href]="generateURL(evento.id)" target="_blank">
+            <div class="image-container">
+              <img src="./assets/images/eventos/{{ evento.photo }}" alt="Evento" />
+            </div>
+            <ion-card-header>
+              <ion-card-subtitle>{{ evento.name }}</ion-card-subtitle>
+            </ion-card-header>
+            <ion-card-content>
+              <ion-row>
+                <ion-col size="8">
+                  <p>{{ evento.host }} • 2.5M views • {{ evento.startDate | date }}</p>
+                </ion-col>
+                <ion-col size="4" class="text-right price">
+                  FREE
+                </ion-col>
+              </ion-row>
+            </ion-card-content>
+          </ion-card>
+        </ng-container>
+      </ng-container>
     </ion-card>
   </ion-grid>
 </ion-content>

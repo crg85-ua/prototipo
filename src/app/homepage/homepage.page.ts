@@ -1,6 +1,5 @@
 import { Component, OnInit } from '@angular/core';
 import { Evento } from '../models/evento';
-import { Router } from '@angular/router';
 import { EventServiceService } from '../services/event-service.service';
 
 @Component({
@@ -13,7 +12,7 @@ export class HomepagePage implements OnInit {
   selectedTab: string = 'all';
   eventos : Evento[] = [];
 
-  constructor(private router: Router, private eventSrv : EventServiceService) { }
+  constructor(private eventSrv : EventServiceService) { }
 
   ngOnInit() {
     this.eventSrv.getEventos().subscribe(eventos => {
@@ -27,8 +26,7 @@ export class HomepagePage implements OnInit {
     this.selectedTab = tab;
   }
 
-  showAllEvents() {
-    this.router.navigateByUrl('/home/all-events');
+  generateURL(id: string){
+    return "lista-eventos/detalle-evento/"+id;
   }
-
 }
