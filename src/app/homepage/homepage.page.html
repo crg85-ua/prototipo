@@ -3,7 +3,7 @@
     <!-- Header with categories -->
     <ion-grid>
       <ion-row>
-        <ion-col size="12">
+        <ion-col size="12" [style.padding-top]="'58px'">
           <div class="tab-container">
             <button class="tab-button" [ngClass]="{ 'active': selectedTab === 'all' }"
               (click)="selectTab('all')">All</button>
