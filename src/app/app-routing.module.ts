@@ -17,6 +17,10 @@ const routes: Routes = [
   {
     path: 'perfil',
     loadChildren: () => import('./perfil/perfil.module').then( m => m.PerfilPageModule)
+  },
+  {
+    path: 'buscar-evento',
+    loadChildren: () => import('./buscar-evento/buscar-evento.module').then( m => m.BuscarEventoPageModule)
   }
 
 ];
