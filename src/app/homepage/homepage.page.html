@@ -43,14 +43,14 @@
       <ion-col>
         <h2 class="header-title">
           Top eventos
-          <a href='home/all-events' class="see-all">See all</a>
+          <a href='tabs/home/all-events' class="see-all">See all</a>
         </h2>
       </ion-col>
     </ion-row>
     <ion-card *ngIf="selectedTab === 'all'">
       <ng-container *ngFor="let evento of eventos; let i = index">
         <ng-container *ngIf=" i < 2">
-          <ion-card [href]="generateURL(evento.id)" target="_blank">
+          <ion-card [href]="generateURL(evento.id)">
             <div class="image-container">
               <img src="./assets/images/eventos/{{ evento.photo }}" alt="Evento" />
             </div>
@@ -77,14 +77,14 @@
       <ion-col>
         <h2 class="header-title">
           Tendencias
-          <a href="#" class="see-all">See all</a>
+          <a href="tabs/home/all-events" class="see-all">See all</a>
         </h2>
       </ion-col>
     </ion-row>
     <ion-card *ngIf="selectedTab === 'all' || selectedTab === 'tendencias'">
       <ng-container *ngFor="let evento of eventos; let i = index">
         <ng-container *ngIf=" i > 1 && i < 4">
-          <ion-card [href]="generateURL(evento.id)" target="_blank">
+          <ion-card [href]="generateURL(evento.id)">
             <div class="image-container">
               <img src="./assets/images/eventos/{{ evento.photo }}" alt="Evento" />
             </div>
@@ -111,14 +111,14 @@
       <ion-col>
         <h2 class="header-title">
           Recomendados
-          <a href="#" class="see-all">See all</a>
+          <a href="tabs/home/all-events" class="see-all">See all</a>
         </h2>
       </ion-col>
     </ion-row>
     <ion-card *ngIf="selectedTab === 'all' || selectedTab === 'para-ti'">
       <ng-container *ngFor="let evento of eventos; let i = index">
         <ng-container *ngIf=" i > 2 && i < 5">
-          <ion-card [href]="generateURL(evento.id)" target="_blank">
+          <ion-card [href]="generateURL(evento.id)">
             <div class="image-container">
               <img src="./assets/images/eventos/{{ evento.photo }}" alt="Evento" />
             </div>

@@ -27,6 +27,6 @@ export class HomepagePage implements OnInit {
   }
 
   generateURL(id: string){
-    return "lista-eventos/detalle-evento/"+id;
+    return "tabs/home/detalle-evento/"+id;
   }
 }

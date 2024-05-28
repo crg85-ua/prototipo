@@ -25,7 +25,7 @@
     <!-- Featured Event Section -->
     <ion-card>
       <ng-container *ngFor="let evento of eventos">
-        <ion-card [href]="generateURL(evento.id)" target="_blank">
+        <ion-card [href]="generateURL(evento.id)">
           <div class="image-container">
             <img src="./assets/images/eventos/{{ evento.photo }}" alt="Evento" />
           </div>

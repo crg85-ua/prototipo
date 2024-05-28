@@ -19,7 +19,7 @@ export class AllEventsPage implements OnInit {
   }
 
   generateURL(id: string){
-    return "lista-eventos/detalle-evento/"+id;
+    return "tabs/home/all-events/detalle-evento/"+id;
   }
 
 }
