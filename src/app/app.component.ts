@@ -32,6 +32,10 @@ export class AppComponent implements OnInit {
 
   ngOnInit() {}
 
+  ngOnChange(){
+    this.showNavBar = this.router.url !== '/login';
+  }
+
   toggleMenu() {
     this.showMenu = !this.showMenu;
   }
