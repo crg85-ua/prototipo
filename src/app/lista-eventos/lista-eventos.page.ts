@@ -17,12 +17,12 @@ export class ListaEventosPage implements OnInit {
   }
 
   getData(){
-    fetch('../../assets/eventos.json').then(res => res.json())
+    fetch('../../assets/eventos/eventos.json').then(res => res.json())
     .then(json => {this.eventos = json;})
   }
 
   generateURL(id: string){
-    return "/tabs/detalle-evento/"+id;
+    return "tabs/lista-eventos/detalle-evento/"+id;
   }
 
 }

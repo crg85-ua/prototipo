@@ -14,7 +14,7 @@ export class DetalleEventoPage implements OnInit {
   eventos : Evento[] = [];
 
 
-  constructor(private route : ActivatedRoute, private http: HttpClient) { }
+  constructor(private route : ActivatedRoute) { }
 
   ngOnInit() {
     this.evento.id = this.route.snapshot.paramMap.get('id') ?? '0';
@@ -22,7 +22,7 @@ export class DetalleEventoPage implements OnInit {
   }
 
   readEventFromJson(id: string) {
-    fetch('../../assets/eventos.json').then(res => res.json())
+    fetch('../../assets/eventos/eventos.json').then(res => res.json())
     .then(json => {
       this.eventos = json;
       this.eventos.forEach(element => {

@@ -8,12 +8,16 @@ const routes: Routes = [
     component: TabsPage,
     children: [
       {
+        path: 'lista-eventos',
+        loadChildren: () => import('../lista-eventos/lista-eventos.module').then(m => m.ListaEventosPageModule)
+      },
+      {
         path: 'crear-evento',
         loadChildren: () => import('../crear-evento/crear-evento.module').then(m => m.CrearEventoPageModule)
       },
       {
-        path: 'lista-eventos',
-        loadChildren: () => import('../lista-eventos/lista-eventos.module').then(m => m.ListaEventosPageModule)
+        path: 'listas-fav',
+        loadChildren: () => import('../listas-fav/listas-fav.module').then( m => m.ListasFavPageModule)
       },
       {
         path: 'home',

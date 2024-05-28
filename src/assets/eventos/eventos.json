@@ -24,7 +24,7 @@
         "startDate": "2024-06-15",
         "host": "Ayuntamiento de Barcelona",
         "location": "Parque de la Ciutadella",
-        "photo": "https://example.com/concierto.jpg"
+        "photo": "evento1.jpg"
     },
     {
         "id": 4,
@@ -33,7 +33,7 @@
         "startDate": "2024-06-20",
         "host": "Galería de Arte Moderno",
         "location": "Carrer dels Angels, 123",
-        "photo": "https://example.com/exposicion.jpg"
+        "photo": "evento4.jpg"
     },
     {
         "id": 5,
@@ -42,6 +42,6 @@
         "startDate": "2024-07-02",
         "host": "Mercado de la Boqueria",
         "location": "La Rambla, 91",
-        "photo": "https://example.com/feria.jpg"
+        "photo": "evento5.jpg"
     }
 ]
