@@ -1,39 +1,47 @@
-<ion-header [translucent]="true">
+<!-- <ion-header [translucent]="true">
   <ion-toolbar>
     <ion-title>listas-fav</ion-title>
   </ion-toolbar>
-</ion-header>
+</ion-header> -->
 
 <ion-content [fullscreen]="true">
-  <ion-header collapse="condense">
-    <ion-toolbar>
-      <ion-title size="large">listas-fav</ion-title>
-    </ion-toolbar>
-  </ion-header>
   <div class="centered-div">
     <ion-grid>
+      <h2>Mis listas favoritas</h2>
       <ion-row>
         <ion-col>
-          <ion-card>
+          <ion-card [href]="'tabs/lista-eventos'">
             <ion-card-header>
-              <ion-card-title>fav1</ion-card-title>
+              <ion-card-title>Café especialidad</ion-card-title>
             </ion-card-header>
-            <img alt="Evento" [src]="'../../assets/images/favoritas/fav1.jpg'" />
+            <img class="imagen-fija" alt="Evento" [src]="'../../assets/images/favoritas/fav1.jpg'" />
           </ion-card>
         </ion-col>
         <ion-col>
-          <h2>fav2</h2>
-          <img alt="Evento" [src]="'../../assets/images/favoritas/fav2.jpg'" />
+          <ion-card [href]="'tabs/lista-eventos'">
+            <ion-card-header>
+              <ion-card-title>Club de lectura</ion-card-title>
+            </ion-card-header>
+            <img class="imagen-fija" alt="Evento" [src]="'../../assets/images/favoritas/fav2.jpg'" />
+          </ion-card>
         </ion-col>
       </ion-row>
       <ion-row>
         <ion-col>
-          <h2>fav3</h2>
-          <img alt="Evento" [src]="'../../assets/images/favoritas/fav3.jpg'" />
+          <ion-card [href]="'tabs/lista-eventos'">
+            <ion-card-header>
+              <ion-card-title>Artesanías</ion-card-title>
+            </ion-card-header>
+            <img class="imagen-fija" alt="Evento" [src]="'../../assets/images/favoritas/fav3.jpg'" />
+          </ion-card>
         </ion-col>
         <ion-col>
-          <h2>fav4</h2>
-          <img alt="Evento" [src]="'../../assets/images/favoritas/fav4.jpg'" />
+          <ion-card [href]="'tabs/lista-eventos'">
+            <ion-card-header>
+              <ion-card-title>Eventos sociales</ion-card-title>
+            </ion-card-header>
+            <img class="imagen-fija" alt="Evento" [src]="'../../assets/images/favoritas/fav4.jpg'" />
+          </ion-card>
         </ion-col>
       </ion-row>
     </ion-grid>
@@ -41,9 +49,13 @@
 </ion-content>
 <style>
   .centered-div {
-      margin: 5% 30% 5% 30%;
+      margin: 5% 20% 5% 20%;
       display: flex;
       flex-direction: column;
       align-items: left;
-  }  
-  </style>
+  }
+  .imagen-fija {
+  width: 200px;
+  height: 200px;
+}
+</style>
