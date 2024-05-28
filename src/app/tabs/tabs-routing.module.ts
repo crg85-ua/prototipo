@@ -20,15 +20,19 @@ const routes: Routes = [
         loadChildren: () => import('../listas-fav/listas-fav.module').then( m => m.ListasFavPageModule)
       },
       {
+        path: 'home',
+        loadChildren: () => import('../homepage/homepage.module').then(m => m.HomepagePageModule)
+      },
+      {
         path: '',
-        redirectTo: '/tabs/lista-eventos',
+        redirectTo: '/tabs/home',
         pathMatch: 'full'
       }
     ]
   },
   {
     path: '',
-    redirectTo: '/tabs/lista-eventos',
+    redirectTo: '/tabs/home',
     pathMatch: 'full'
   }
 ];
